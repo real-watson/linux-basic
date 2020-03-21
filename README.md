@@ -1,2 +1,2 @@
 # linux-basic
-The procedure of learning linux about Embeded system designer 
+The procedure of learning linux about Embeded System Designer 
