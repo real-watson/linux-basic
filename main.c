@@ -1,5 +1,13 @@
 #include <stdio.h>
 #define VERSION "v0.1"
+typedef unsigned int uint32;
+/*0x12345678 -> 0x78563412 as well as LE_TO_BE(le)*/
+#define BE_TO_LE(be) ( \
+					 (((uint32)(be) & 0xff000000) >> 24) |\
+					 (((uint32)(be) & 0x00ff0000) >> 8)  |\
+					 (((uint32)(be) & 0x0000ff00) << 8)  |\
+					 (((uint32)(be) & 0x000000ff) << 24)  \
+					 )
 
 /*
 *name:query mode from system
@@ -58,5 +66,6 @@ int main(int argc, char **argv)
 		printf("It suits odd parity\n");
 	else
 		printf("It does not suit\n");
+	printf("The big to litte %x\n",BE_TO_LE(xp));
 	return 0;
 }
