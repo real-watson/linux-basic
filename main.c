@@ -70,6 +70,6 @@ int main(int argc, char **argv)
 		printf("It suits odd parity\n");
 	else
 		printf("It does not suit\n");
-	printf("The big to litte %x\n",BE_TO_LE(xp));
+	printf("The endian from the big to the little [%x]\n",BE_TO_LE(xp));
 	return 0;
 }
