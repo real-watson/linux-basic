@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define VERSION "v0.1"
+#define VERSION "v2.1rc1"
 typedef unsigned int uint32;
 /*0x12345678 -> 0x78563412 as well as LE_TO_BE(le)*/
 #define BE_TO_LE(be) ( \
