@@ -91,6 +91,27 @@ void standard_convert(float num)
 	
 }
 
+/*count the bits of number*/
+int count_bits(int n)
+{
+	int res = 0;
+	/*
+	while(n)
+	{
+		res++;
+		n = n&(n-1);
+	}
+	*/
+	while(n)
+	{
+		if ((n % 2))
+			res++;
+		n = n / 2;
+	}
+	return res;
+}
+
+
 int main(int argc, char **argv)
 {
 	int xp = 0x12345678;
@@ -98,6 +119,7 @@ int main(int argc, char **argv)
 	int res;
 	unsigned int oddlen;
 	float num = 100.125;
+	int bit = 7;
 	printf("The latest version is %s\n",VERSION);
 	res = query_endian_mode(xp);
 	if (!res)
@@ -110,5 +132,6 @@ int main(int argc, char **argv)
 		printf("It does not suit\n");
 	printf("The endian from the big to the little [%x]\n",BE_TO_LE(xp));
 	standard_convert(num);
+	printf("The 1 of bit is %d\n",count_bits(bit));
 	return 0;
 }
