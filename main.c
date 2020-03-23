@@ -54,12 +54,54 @@ int check_odd_parity(int array[], unsigned int len)
 		return 1;
 }
 
+/*
+*name: 745 standard convert
+*input param: 10.1231 like this
+*return: void
+*/
+
+void standard_convert(float num)
+{
+	/*100.125 -> 1100100.001*/
+	int res;
+	int k = 1;
+	int total_m = 0;
+	int m;
+	float n; 
+	int total_n = 0;
+	int i = 0;
+	m = (int)num;
+	n = num - m;
+	while(1)
+	{
+		res = m % 2;
+		total_m += k * res;
+		k *= 10;
+		m *= 0.5;
+		if (!m)
+			break;
+	}
+	/*
+	while(1)
+	{
+		n *= 2;
+		res = n / 1;
+		i++;
+		if (n == 1)
+			break;
+	}
+	*/
+	printf("The output is %d\n",total_m);
+	
+}
+
 int main(int argc, char **argv)
 {
 	int xp = 0x12345678;
 	int odd[10] = {0,1,1,0,1,0,0,0,1,1};  /*odd parity*/
 	int res;
 	unsigned int oddlen;
+	float num = 100.125;
 	printf("The latest version is %s\n",VERSION);
 	res = query_endian_mode(xp);
 	if (!res)
@@ -71,5 +113,6 @@ int main(int argc, char **argv)
 	else
 		printf("It does not suit\n");
 	printf("The endian from the big to the little [%x]\n",BE_TO_LE(xp));
+	standard_convert(num);
 	return 0;
 }
