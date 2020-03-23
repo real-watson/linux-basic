@@ -67,11 +67,7 @@ void standard_convert(float num)
 	int k = 1;
 	int total_m = 0;
 	int m;
-	float n; 
-	int total_n = 0;
-	int i = 0;
 	m = (int)num;
-	n = num - m;
 	while(1)
 	{
 		res = m % 2;
