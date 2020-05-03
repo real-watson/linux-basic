@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "app_data_type.h"
 #define VERSION "v2.2rc1"
 typedef unsigned int uint32;
 /*0x12345678 -> 0x78563412 as well as LE_TO_BE(le)*/
@@ -114,5 +115,6 @@ int count_bits(int n)
 int main(void)
 {
 	printf("back to interviewing\n");
+	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION);
 	return 0;
 }
