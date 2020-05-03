@@ -117,6 +117,7 @@ int main(void)
 {
 	printf("back to interviewing\n");
 	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION);
+	printf("The fixed structs is %lu\n",SIZEOFALL);
 	int res1,res2;
 	res1 = file_size_withf("test.txt"); 
 	res2 = file_size_withoutf("test.txt"); 
