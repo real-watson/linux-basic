@@ -36,8 +36,7 @@ int query_endian_mode(int check)
 *return: 0 means not failed
 */
 
-int check_odd_parity(int array[], unsigned int len)
-{
+int check_odd_parity(int array[], unsigned int len) {
 	unsigned int total = 0;
 	unsigned int i = 0;
 	int *ptr = array;  /*new ptr for array*/
@@ -111,27 +110,9 @@ int count_bits(int n)
 	return res;
 }
 
-
-int main(int argc, char **argv)
+/*main function*/
+int main(void)
 {
-	int xp = 0x12345678;
-	int odd[10] = {0,1,1,0,1,0,0,0,1,1};  /*odd parity*/
-	int res;
-	unsigned int oddlen;
-	float num = 100.125;
-	int bit = 7;
-	printf("The latest version is %s\n",VERSION);
-	res = query_endian_mode(xp);
-	if (!res)
-		printf("It is LE mode\n");
-	oddlen = sizeof(odd)/sizeof(odd[0]);
-	res = check_odd_parity(odd,oddlen);
-	if (!res)
-		printf("It suits odd parity\n");
-	else
-		printf("It does not suit\n");
-	printf("The endian from the big to the little [%x]\n",BE_TO_LE(xp));
-	standard_convert(num);
-	printf("The 1 of bit is %d\n",count_bits(bit));
+	printf("back to interviewing\n");
 	return 0;
 }
