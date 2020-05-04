@@ -13,5 +13,6 @@ int main(void)
 	res1 = file_size_withf("test.txt"); 
 	res2 = file_size_withoutf("test.txt"); 
 	printf("The size of file is %d,and %d\n",res1,res2);
+	printf("The biggest one is %d %d\n",MAX_2(1,2),MAX_3(1,2,3));
 	return 0;
 }

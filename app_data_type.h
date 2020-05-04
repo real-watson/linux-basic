@@ -38,6 +38,9 @@ typedef struct clothes{
 				char name[64]; \
 				INFO *info; \
 				})
+/*get the bigger one*/
+#define MAX_2(X,Y) (X)>(Y)?(X):(Y)
+#define MAX_3(X,Y,Z) (MAX_2(X,Y))>Z?(MAX_2(X,Y)):(Z)
 
 #define _APP_DATA_TYPE_
 #endif 
