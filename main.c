@@ -19,5 +19,6 @@ int main(void)
 	self_swap_number(&x,&y);
 	printf("The swap numnber is %d %d\n",x,y);
 	self_all_number();	
+	size_space_full();
 	return 0;
 }

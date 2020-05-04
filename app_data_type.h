@@ -69,5 +69,18 @@ int self_all_number()
 	}
 }	
 
+/*sizeof*/
+int size_space_full()
+{
+	int **a[3][4];
+	/*
+	 * xxxx xxxx xxxx xxxx 
+	 * xxxx xxxx xxxx xxxx * int(4 bytes)  == 48 bytes( But in some platform it is 96)
+	 * xxxx xxxx xxxx xxxx
+	 */
+	printf("The size of a is %d\n",sizeof(a));	
+	return sizeof(a);
+}
+
 #define _APP_DATA_TYPE_
 #endif 
