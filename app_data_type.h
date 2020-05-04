@@ -89,5 +89,9 @@ int size_space_full()
 //int * const a;/*指针无法修改*/
 //int const * a const;/*都无法修改*/
 
+/*get the length of one year in second*/
+#define SECOND_YEAR (365*24*60*60)
+//#define SECOND_YEAR_ADVANCED ((365*24*60*60)UL)
+
 #define _APP_DATA_TYPE_
 #endif 

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "app_data_type.h"
 #include "app_self_file.h"
 #include "app_endian_type.h"
@@ -30,5 +31,6 @@ int main(void)
 	printf("The add is %p\n",&string);
 	res_get_memory();
 	get_memory_zero(2);
+	printf("The second is %d\n",SECOND_YEAR);
 	return 0;
 }
