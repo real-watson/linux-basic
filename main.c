@@ -3,7 +3,8 @@
 #include "app_self_file.h"
 #include "app_endian_type.h"
 #define VERSION "v2.2rc1"
-extern void get_memory(char *ptr, int n);
+extern void get_memory(char **ptr, int n);
+extern char *res_get_memory(char *ptr, int n);
 /*main function*/
 int main(void)
 {
@@ -25,5 +26,9 @@ int main(void)
 	get_memory(&string,100);/*pass the ptr*/
 	strcpy(string,"hello");
 	printf("The string is %s\n",string);
+	printf("The add is %p\n",&string);
+	res_get_memoery(string,100);
+	strcpy(string,"hello");
+	printf("The str is %s\n",string);
 	return 0;
 }
