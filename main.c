@@ -9,7 +9,8 @@ extern void res_get_memory();
 extern void get_memory_zero(unsigned int flag);
 /*main function*/
 int main(void)
-{ printf("back to interviewing\n");
+{ 
+	printf("back to interviewing\n");
 	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION);
 	printf("The fixed structs is %lu\n",SIZEOFALL);
 	int res1,res2;
