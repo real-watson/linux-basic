@@ -5,6 +5,7 @@
 #define VERSION "v2.2rc1"
 extern void get_memory(char **ptr, int n);
 extern void res_get_memory();
+extern void get_memory_zero(unsigned int flag);
 /*main function*/
 int main(void)
 { printf("back to interviewing\n");
@@ -28,5 +29,6 @@ int main(void)
 	printf("The string is %s\n",string);
 	printf("The add is %p\n",&string);
 	res_get_memory();
+	get_memory_zero(2);
 	return 0;
 }
