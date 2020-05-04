@@ -83,11 +83,11 @@ int size_space_full()
 }
 
 /*const*/
-const int a;/*a是一个常数不可修改*/
-int const a;/*同上*/
-const int *a;/*一个指向cosnt对象指针，不能通过这个指针修改这个值*/
-int * const a;/*指针无法修改*/
-int const * a const;/*都无法修改*/
+//const int a;/*a是一个常数不可修改*/
+//int const a;/*同上*/
+//const int *a;/*一个指向cosnt对象指针，不能通过这个指针修改这个值*/
+//int * const a;/*指针无法修改*/
+//int const * a const;/*都无法修改*/
 
 #define _APP_DATA_TYPE_
 #endif 
