@@ -42,5 +42,17 @@ typedef struct clothes{
 #define MAX_2(X,Y) (X)>(Y)?(X):(Y)
 #define MAX_3(X,Y,Z) (MAX_2(X,Y))>Z?(MAX_2(X,Y)):(Z)
 
+/*using ptr to swap number*/
+int self_swap_number(int *x, int *y)
+{
+	int t;
+	t = *x;
+	*x = *y;/*y to x*/
+	*y = t;/*x to y*/
+	/*wrong way because t-> y, y->x,they are the same*/
+	// *y = t;
+	// *x = *y;
+}
+
 #define _APP_DATA_TYPE_
 #endif 
