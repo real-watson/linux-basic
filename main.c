@@ -18,5 +18,6 @@ int main(void)
 	printf("The biggest one is %d %d\n",MAX_2(1,2),MAX_3(1,2,3));
 	self_swap_number(&x,&y);
 	printf("The swap numnber is %d %d\n",x,y);
+	self_all_number();	
 	return 0;
 }

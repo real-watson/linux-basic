@@ -53,6 +53,21 @@ int self_swap_number(int *x, int *y)
 	// *y = t;
 	// *x = *y;
 }
+/*static using*/
+void self_sum_number(int x)
+{
+	static all = 0;
+	printf("The all is %d\n",all);
+	all += x;
+}
+
+int self_all_number()
+{
+	int i;
+	for (i=0; i<5; i++){
+		self_sum_number(i);
+	}
+}	
 
 #define _APP_DATA_TYPE_
 #endif 
