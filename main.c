@@ -4,17 +4,17 @@
 #include "app_endian_type.h"
 #define VERSION "v2.2rc1"
 extern void get_memory(char **ptr, int n);
-extern char *res_get_memory(char *ptr, int n);
+extern void res_get_memory();
 /*main function*/
 int main(void)
-{
-	printf("back to interviewing\n");
+{ printf("back to interviewing\n");
 	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION);
 	printf("The fixed structs is %lu\n",SIZEOFALL);
 	int res1,res2;
 	int x = 9;
 	int y = 29;
 	char *string = NULL;
+	char *str = NULL;
 	res1 = file_size_withf("test.txt"); 
 	res2 = file_size_withoutf("test.txt"); 
 	printf("The size of file is %d,and %d\n",res1,res2);
@@ -27,8 +27,6 @@ int main(void)
 	strcpy(string,"hello");
 	printf("The string is %s\n",string);
 	printf("The add is %p\n",&string);
-	res_get_memoery(string,100);
-	strcpy(string,"hello");
-	printf("The str is %s\n",string);
+	res_get_memory();
 	return 0;
 }

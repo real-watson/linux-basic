@@ -13,14 +13,19 @@ void get_memory(char **p, int n)
 	}
 }
 
-char *res_get_memoery(char *p, int n)
+void res_get_memory()
 {
-	printf("The add is %p\n",*p);
+	char *p = NULL;
+	char str[64] = "helloworld";
+	int n = 100;
+
 	p = (char *)malloc(sizeof(char) * n);
 	if (NULL == p){
-		return NULL;
+		return;
 	}
-	return p;
+	//strcpy(p,str);
+	memcpy(p,str,strlen(str));
+	printf("The str is %s\n",p);
 }
 
 
