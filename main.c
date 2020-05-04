@@ -3,6 +3,7 @@
 #include "app_self_file.h"
 #include "app_endian_type.h"
 #define VERSION "v2.2rc1"
+extern void get_memory(char *ptr, int n);
 /*main function*/
 int main(void)
 {
@@ -12,6 +13,7 @@ int main(void)
 	int res1,res2;
 	int x = 9;
 	int y = 29;
+	char *string = NULL;
 	res1 = file_size_withf("test.txt"); 
 	res2 = file_size_withoutf("test.txt"); 
 	printf("The size of file is %d,and %d\n",res1,res2);
@@ -20,5 +22,8 @@ int main(void)
 	printf("The swap numnber is %d %d\n",x,y);
 	self_all_number();	
 	size_space_full();
+	get_memory(&string,100);/*pass the ptr*/
+	strcpy(string,"hello");
+	printf("The string is %s\n",string);
 	return 0;
 }
