@@ -35,7 +35,7 @@ void get_memory_zero(unsigned short flag)
 			flag = 1;
 			break;
 		case 1: 
-			flag = (sizeof(ptr = (char*)malloc(0)));
+			flag = (sizeof(ptr = (char*)malloc(0)));/*sizeof is not zero*/
 			break;
 		case 2:
 			flag = (strlen(ptr = (char*)malloc(0)));
