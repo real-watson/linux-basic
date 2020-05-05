@@ -7,6 +7,7 @@
 extern void get_memory(char **ptr, int n);
 extern void res_get_memory();
 extern void get_memory_zero(unsigned int flag);
+extern void self_strcpy(char *dst, const char *src);
 /*main function*/
 int main(void)
 { 
@@ -33,5 +34,9 @@ int main(void)
 	res_get_memory();
 	get_memory_zero(2);
 	printf("The second is %d\n",SECOND_YEAR);
+	char dst[64] = "";
+	char src[64] = "watson";
+	self_strcpy(dst,src);
+	printf("The dst is %s\n",dst);
 	return 0;
 }
