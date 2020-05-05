@@ -92,6 +92,8 @@ int size_space_full()
 /*get the length of one year in second*/
 #define SECOND_YEAR (365*24*60*60)
 //#define SECOND_YEAR_ADVANCED ((365*24*60*60)UL)
+/*define macro for malloc like (char*)malloc(100*sizeof(char))*/
+#define MALLOC(n,type) ((type*)(malloc((n) * sizeof(type))))
 
 #define _APP_DATA_TYPE_
 #endif 
