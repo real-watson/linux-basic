@@ -12,6 +12,25 @@ void self_strcpy(char *dst, const char *src)
 	*dst = '\0';
 }
 
+/*mystrncpy*/
+char *self_strncpy(char *dst, const char *src, int size)
+{
+	if (0 == size){
+		return dst;
+	}
+	while(size--){
+		*dst = *src;
+		if (*dst == '\0'){
+			//return dst;
+			break;
+		}
+		dst++;
+		src++;
+	}
+	*dst = '\0';
+	return dst;
+}
+
 char *copy_string(const char *src)
 {
 	assert(src);
