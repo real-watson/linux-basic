@@ -18,12 +18,18 @@ char *copy_string(const char *src)
 	int len = 0;
 	char *new_str = NULL;
 
-	len = strlen(src);
-	new_str = (char*)malloc(len + 1);
+	new_str = (char*)malloc(strlen(src) + 1);
 
 	if (NULL == new_str){
-		return NULL;
+		goto failure;/*goto free*/
 	}
+
 	self_strcpy(new_str,src);
+	free(new_str);
 	return new_str;
+
+failure:
+	free(new_str);
+	new_str = NULL;
 }
+
