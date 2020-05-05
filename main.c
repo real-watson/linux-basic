@@ -8,6 +8,7 @@ extern void get_memory(char **ptr, int n);
 extern void res_get_memory();
 extern void get_memory_zero(unsigned int flag);
 extern void self_strcpy(char *dst, const char *src);
+extern char *copy_string(const char *src);
 /*main function*/
 int main(void)
 { 
@@ -38,5 +39,6 @@ int main(void)
 	char src[64] = "watson";
 	self_strcpy(dst,src);
 	printf("The dst is %s\n",dst);
+	printf("The dst string is %s\n",copy_string(src));
 	return 0;
 }
