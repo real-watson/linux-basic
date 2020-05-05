@@ -1,6 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX_LINE 1024
+/*copy lines to the other file*/
+void copy_long_lines(FILE *in, FILE *out)
+{
+	char buff[MAX_LINE] = "";
+	if (NULL == in || NULL == out){
+		return;
+	}
+	/*
+	while(fgets(buff,MAX_LINE,in) != NULL){
+		fputs(buff,out);
+	}
+	*/
+	while(1){
+		if (fgets(buff,MAX_LINE,in) == NULL){
+			break;
+		}
+		fputs(buff,out);
+	}
+}
 /*read one file and return its size*/
 int file_size_withf(const char *filename)
 {
