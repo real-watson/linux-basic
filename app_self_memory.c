@@ -7,6 +7,7 @@ void get_memory(char **p, int n)
 	 * **p from &string * get the address of string as *p*/
 	printf("The add is %p\n",*p);
 	*p = (char *)malloc(sizeof(char) * n);
+
 	if (NULL == *p){
 		return;
 	}
@@ -45,6 +46,7 @@ void get_memory_zero(unsigned short flag)
 	}
 
 	if (NULL == ptr){
+		free(ptr);
 		printf("The ptr is NULL\n");
 		return;
 	}
@@ -52,6 +54,7 @@ void get_memory_zero(unsigned short flag)
 		printf("flag is zero\n");
 		return;
 	}
+
 	free(ptr);
 }
 

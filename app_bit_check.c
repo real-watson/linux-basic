@@ -8,21 +8,26 @@
 *return: 0 means not failed
 */
 
-int check_odd_parity(int array[], unsigned int len) {
+int check_odd_parity(int array[], unsigned int len) 
+{
 	unsigned int total = 0;
 	unsigned int i = 0;
 	int *ptr = array;  /*new ptr for array*/
+
 	while(1)
 	{
 		total += *ptr++;
 		++i;
-		if (i == len)  /*i <= len - 1*/
+		if (i == len){  /*i <= len - 1*/
 			break;
+		}
 	}
-	if (total % 2)  /*count the number of 1*/
+
+	if (total % 2){  /*count the number of 1*/
 		return 0;
-	else
-		return 1;
+	}
+
+	return 1;
 } 
 /*
 *name: 745 standard convert
@@ -38,14 +43,15 @@ void standard_convert(float num)
 	int total_m = 0;
 	int m;
 	m = (int)num;
-	while(1)
-	{
+
+	while(1){
 		res = m % 2;
 		total_m += k * res;
 		k *= 10;
 		m *= 0.5;
-		if (!m)
+		if (!m){
 			break;
+		}
 	}
 	/*
    	while(1)
@@ -72,11 +78,12 @@ int count_bits(int n)
                n = n&(n-1);
        }
        */
-       while(n)
-       {
-               if ((n % 2))
-                       res++;
-               n = n / 2;
+       while(n){
+       		if ((n % 2)){
+            	res++;
+               	n = n / 2;
+			}
        }
+
        return res;
 }

@@ -28,15 +28,15 @@ int is_empty()
 {
 	if (-1 == top_element){
 		return 0;
-	}else{
-		return 1;
 	}
+
+	return 1;
 }
 int is_full()
 {
 	if ((SIZE-1) == top_element){
 		return 0;
-	}else{
-		return 1;
 	}
+
+	return 1;
 }
