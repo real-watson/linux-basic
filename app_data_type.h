@@ -24,6 +24,21 @@ typedef struct clothes{
 		int price;
 }INFO;
 
+/*using like DESKTOP *desktop,desktop.linux.fedora*/
+typedef struct linux{
+		char fedora[32];
+		char ubuntu[32];
+		char centos[32];
+}LINUX;
+
+typedef struct desktop{
+		char mac[64];
+		char win[64];
+		LINUX *linux;	
+}DESKTOP;
+
+
+
 /*two structs
  * int int char64 (struct)
  * int int char int int 
