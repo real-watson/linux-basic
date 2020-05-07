@@ -9,6 +9,7 @@ extern void res_get_memory();
 extern void get_memory_zero(unsigned int flag);
 extern void self_strcpy(char *dst, const char *src);
 extern char *copy_string(const char *src);
+extern void memory_divide();
 /*main function*/
 int main(void)
 { 
@@ -40,5 +41,6 @@ int main(void)
 	self_strcpy(dst,src);
 	printf("The dst is %s\n",dst);
 	printf("The dst string is %s\n",copy_string(src));
+	memory_divide();
 	return 0;
 }
