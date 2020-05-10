@@ -3,7 +3,7 @@
 #include "app_data_type.h"
 #include "app_self_file.h"
 #include "app_endian_type.h"
-#define VERSION "v2.2rc1"
+#define VERSION "v4.0"
 extern void get_memory(char **ptr, int n);
 extern void res_get_memory();
 extern void get_memory_zero(unsigned int flag);
