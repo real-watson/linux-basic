@@ -10,12 +10,12 @@ extern void get_memory_zero(unsigned int flag);
 extern void self_strcpy(char *dst, const char *src);
 extern char *copy_string(const char *src);
 extern void memory_divide();
+extern void self_get_digits(const char *str);
 /*main function*/
 int main(void)
 { 
 	printf("back to interviewing\n");
-	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION);
-	printf("The fixed structs is %lu\n",SIZEOFALL);
+	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION); printf("The fixed structs is %lu\n",SIZEOFALL);
 	int res1,res2;
 	int x = 9;
 	int y = 29;
@@ -42,5 +42,8 @@ int main(void)
 	printf("The dst is %s\n",dst);
 	printf("The dst string is %s\n",copy_string(src));
 	memory_divide();
+	/*get digits*/
+	char srcstr[32] = "0d901t2t2t2t2t2t1111";
+	self_get_digits(srcstr);
 	return 0;
 }

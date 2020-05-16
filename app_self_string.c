@@ -1,6 +1,35 @@
 #include <stdlib.h>
 #include <stdio.h> #include <string.h>
 #include <assert.h>
+
+/*reading the digit from string*/
+void self_get_digits(const char *str)
+{
+	assert(str);
+	int num = 0;
+	/*
+	 * 123de1234jlads1
+	 * 123 1234 1(1无法打印)xxx
+	 * 作为结果
+	 */
+
+	while (*str != '\0'){
+		if (*str >= '0' && *str <= '9'){
+			num = 10*num + *str - '0';
+			if ( num == 0){
+				printf("The num is %d\n",num);
+			}
+		} else{
+			if (num != 0){
+				printf("The num is %d\n",num);
+			}
+
+			num = 0;
+		}
+		str++;
+	}
+}
+
 void self_strcpy(char *dst, const char *src)
 {
 	int len = 0;
