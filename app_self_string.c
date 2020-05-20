@@ -1,5 +1,6 @@
 #include <stdlib.h>
-#include <stdio.h> #include <string.h>
+#include <stdio.h> 
+#include <string.h>
 #include <assert.h>
 
 /*reading the digit from string*/
@@ -7,26 +8,30 @@ void self_get_digits(const char *str)
 {
 	assert(str);
 	int num = 0;
+	int len = strlen(str);
+
 	/*
 	 * 123de1234jlads1
-	 * 123 1234 1(1无法打印)xxx
+	 * 123 1234 1(1可以打印)xxx
 	 * 作为结果
 	 */
 
-	while (*str != '\0'){
+	while (len--){
 		if (*str >= '0' && *str <= '9'){
-			num = 10*num + *str - '0';
-			if ( num == 0){
+			num = 10*num + *str - '0';/*字符转数字*/
+			if (!num)
 				printf("The num is %d\n",num);
-			}
-		} else{
+		}else{
 			if (num != 0){
 				printf("The num is %d\n",num);
+				num = 0;
 			}
-
-			num = 0;
 		}
+
 		str++;
+
+		if (*str == '\0')/*结束符判断*/
+			printf("The num is %d\n",num);
 	}
 }
 

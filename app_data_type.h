@@ -25,6 +25,7 @@ typedef struct clothes{
 }INFO;
 
 /*using like DESKTOP *desktop,desktop.linux.fedora*/
+/*
 typedef struct linux{
 		char fedora[32];
 		char ubuntu[32];
@@ -36,7 +37,7 @@ typedef struct desktop{
 		char win[64];
 		LINUX *linux;	
 }DESKTOP;
-
+*/
 
 
 /*two structs

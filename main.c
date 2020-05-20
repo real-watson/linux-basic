@@ -43,7 +43,7 @@ int main(void)
 	printf("The dst string is %s\n",copy_string(src));
 	memory_divide();
 	/*get digits*/
-	char srcstr[32] = "0d901t2t2t2t2t2t1111";
+	char srcstr[32] = "0i0ii1j1j1j888";
 	self_get_digits(srcstr);
 	return 0;
 }
