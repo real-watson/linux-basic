@@ -52,7 +52,7 @@ int main(void)
 	int be = 99;
 	int af = 88;
 	printf("before the be is %d af is %d\n",be,af);
-	SWAP_NUMBER(be,af);
+	SWAP_NUMBER(&be,&af);
 	printf("after the be is %d af is %d\n",be,af);
 		
 	return 0;

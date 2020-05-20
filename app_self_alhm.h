@@ -4,9 +4,9 @@
 #define SWAP_NUMBER(x,y) \
 		do{ \
 			int t; \
-			t = x; \
-			x = y; \
-			y = t; \
+			t = *x; \
+			*x = *y; \
+			*y = t; \
 		}while(0);
 
 
