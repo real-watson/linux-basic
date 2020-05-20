@@ -3,6 +3,7 @@
 #include "app_data_type.h"
 #include "app_self_file.h"
 #include "app_endian_type.h"
+#include "app_self_alhm.h"
 #define VERSION "v4.0"
 extern void get_memory(char **ptr, int n);
 extern void res_get_memory();
@@ -48,5 +49,11 @@ int main(void)
 	bubble_sort(mess,10);
 	for(i=0;i<10;i++)
 		printf("The sort like %d\n",mess[i]);
+	int be = 99;
+	int af = 88;
+	printf("before the be is %d af is %d\n",be,af);
+	SWAP_NUMBER(be,af);
+	printf("after the be is %d af is %d\n",be,af);
+		
 	return 0;
 }
