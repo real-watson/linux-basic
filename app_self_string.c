@@ -35,6 +35,48 @@ void self_get_digits(const char *str)
 	}
 }
 
+/*self strcmp*/
+int self_strcmp(const char *src, char *dst)
+{
+	assert(src);
+	assert(dst);
+	unsigned char sc;
+	unsigned char dt;
+
+	while(1){
+		sc = *src++;
+		dt = *dst++;
+
+		if (sc != dt)/*比较大小，不想等则肯定大小*/
+			return sc < dt ? -1 : 1;
+		if (!sc)/*相等情况下，若sc存在则break，返回0*/
+			break;
+	}
+	return 0;	
+}
+
+/*self strncmp*/
+int self_strncmp(const char *src, char *dst, unsigned int count)
+{
+	assert(src);
+	assert(dst);
+	unsigned char sc;
+	unsigned char dt;
+
+	if (count == 0)
+		return 0;
+
+	while(--count){
+		sc = *src++;
+		dt = *dst++;
+		if (sc != dt)
+			return sc < dt ? -1 : 1;
+		if (!sc)
+			break;
+	}
+	return 0;
+}
+
 void self_strcpy(char *dst, const char *src)
 {
 	int len = 0;

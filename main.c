@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "app_data_type.h"
-#include "app_self_file.h"
+#include "app_data_type.h" #include "app_self_file.h"
 #include "app_endian_type.h"
 #include "app_self_alhm.h"
 #define VERSION "v4.0"
@@ -13,6 +12,8 @@ extern char *copy_string(const char *src);
 extern void memory_divide();
 extern void self_get_digits(const char *str);
 extern void bubble_sort (int *a,int n);
+extern int self_strcmp(const char *src, char *dst);
+extern int self_strncmp(const char *src, char *dst, unsigned int count);
 /*main function*/
 int main(void)
 { 
@@ -54,6 +55,13 @@ int main(void)
 	printf("before the be is %d af is %d\n",be,af);
 	SWAP_NUMBER(&be,&af);
 	printf("after the be is %d af is %d\n",be,af);
-		
+	const char source[32] = "ihelloworld";
+	char destination[32] = "ihelloworld";	
+	int ret;
+	ret = self_strcmp(source,destination);
+	printf("The ret is %d\n",ret);
+	ret = self_strncmp(source,destination,8);
+	printf("The ret is %d\n",ret);
+
 	return 0;
 }
