@@ -11,15 +11,13 @@ extern void self_strcpy(char *dst, const char *src);
 extern char *copy_string(const char *src);
 extern void memory_divide();
 extern void self_get_digits(const char *str);
+extern void bubble_sort (int *a,int n);
 /*main function*/
 int main(void)
 { 
 	printf("back to interviewing\n");
 	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION); printf("The fixed structs is %lu\n",SIZEOFALL);
-	int res1,res2;
-	int x = 9;
-	int y = 29;
-	char *string = NULL;
+	int res1,res2; int x = 9; int y = 29; char *string = NULL;
 	char *str = NULL;
 	res1 = file_size_withf("test.txt"); 
 	res2 = file_size_withoutf("test.txt"); 
@@ -45,5 +43,10 @@ int main(void)
 	/*get digits*/
 	char srcstr[32] = "0i0ii1j1j1j888";
 	self_get_digits(srcstr);
+	int mess[10] = {12,23,2,33,22,1123,3,44,5,42};
+	int i;
+	bubble_sort(mess,10);
+	for(i=0;i<10;i++)
+		printf("The sort like %d\n",mess[i]);
 	return 0;
 }
