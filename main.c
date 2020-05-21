@@ -14,6 +14,9 @@ extern void self_get_digits(const char *str);
 extern void bubble_sort (int *a,int n);
 extern int self_strcmp(const char *src, char *dst);
 extern int self_strncmp(const char *src, char *dst, unsigned int count);
+extern int self_strlen1(const char *s);
+extern int self_strlen2(const char *s);
+
 /*main function*/
 int main(void)
 { 
@@ -62,6 +65,8 @@ int main(void)
 	printf("The ret is %d\n",ret);
 	ret = self_strncmp(source,destination,8);
 	printf("The ret is %d\n",ret);
-
+	char strlenstr[32] = "Iamfromyours";
+	printf("The len of str is %d\n",self_strlen1(strlenstr));
+	printf("The len of str is %d\n",self_strlen2(strlenstr));
 	return 0;
 }

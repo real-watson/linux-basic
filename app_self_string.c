@@ -10,16 +10,13 @@ int valid_digit(const char c)
 		return 0;
 	return 1;
 }
-
-
 /*get digit*/
 void self_get_digits(const char *str)
 {
 	assert(str);
 	int num = 0;
 	int len = strlen(str);
-
-	/*
+/*
 	 * 123de1234jlads1
 	 * 123 1234 1(1可以打印)xxx
 	 * 作为结果
@@ -115,6 +112,31 @@ char *self_strncpy(char *dst, const char *src, int size)
 	*dst = '\0';
 	return dst;
 }
+/*new function strlen*/
+int self_strlen1(const char *s)
+{
+	int len = 0;
+
+	while(*s++ != '\0')
+		len++;
+	
+	return len;
+}
+
+int self_strlen2(const char *s)
+{
+	const char *sc;
+	/*from linux kernel tree source
+	for(sc = s;*sc != '\0';sc++)
+		;
+	*/
+	sc = s;
+	while(*sc != '\0')
+		sc++;
+
+	return sc - s;/*get the len*/
+}
+
 /**copy_string*/
 char *copy_string(const char *src)
 {
