@@ -3,6 +3,14 @@
 #include <string.h>
 #include <assert.h>
 
+int valid_digit(const char c)
+{
+	if (c >= '0' && c <= '9')
+		return 0;
+	return 1;
+}
+
+
 /*reading the digit from string*/
 void self_get_digits(const char *str)
 {
@@ -17,7 +25,7 @@ void self_get_digits(const char *str)
 	 */
 
 	while (len--){
-		if (*str >= '0' && *str <= '9'){
+		if (!valid_digit(*str)){
 			num = 10*num + *str - '0';/*字符转数字*/
 			if (!num)
 				printf("The num is %d\n",num);
