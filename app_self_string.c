@@ -3,6 +3,7 @@
 #include <string.h>
 #include <assert.h>
 
+/*valid digit*/
 int valid_digit(const char c)
 {
 	if (c >= '0' && c <= '9')
@@ -11,7 +12,7 @@ int valid_digit(const char c)
 }
 
 
-/*reading the digit from string*/
+/*get digit*/
 void self_get_digits(const char *str)
 {
 	assert(str);
@@ -43,7 +44,7 @@ void self_get_digits(const char *str)
 	}
 }
 
-/*self strcmp*/
+/*new function strcmp*/
 int self_strcmp(const char *src, char *dst)
 {
 	assert(src);
@@ -63,7 +64,7 @@ int self_strcmp(const char *src, char *dst)
 	return 0;	
 }
 
-/*self strncmp*/
+/*new function strncmp*/
 int self_strncmp(const char *src, char *dst, unsigned int count)
 {
 	assert(src);
@@ -84,7 +85,7 @@ int self_strncmp(const char *src, char *dst, unsigned int count)
 	}
 	return 0;
 }
-
+/*new function strcpy*/
 void self_strcpy(char *dst, const char *src)
 {
 	int len = 0;
@@ -96,7 +97,7 @@ void self_strcpy(char *dst, const char *src)
 	*dst = '\0';
 }
 
-/*mystrncpy*/
+/*new function strncpy*/
 char *self_strncpy(char *dst, const char *src, int size)
 {
 	if (0 == size){
@@ -114,7 +115,7 @@ char *self_strncpy(char *dst, const char *src, int size)
 	*dst = '\0';
 	return dst;
 }
-
+/**copy_string*/
 char *copy_string(const char *src)
 {
 	assert(src);
