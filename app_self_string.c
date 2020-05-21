@@ -11,7 +11,8 @@ int valid_digit(const char c)
 	return 1;
 }
 /*get digit*/
-void self_get_digits(const char *str) {
+void self_get_digits(const char *str) 
+{
 	assert(str);
 	int num = 0;
 	int len = strlen(str);
