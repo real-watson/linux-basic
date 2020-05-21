@@ -11,8 +11,7 @@ int valid_digit(const char c)
 	return 1;
 }
 /*get digit*/
-void self_get_digits(const char *str)
-{
+void self_get_digits(const char *str) {
 	assert(str);
 	int num = 0;
 	int len = strlen(str);
@@ -135,6 +134,19 @@ int self_strlen2(const char *s)
 		sc++;
 
 	return sc - s;/*get the len*/
+}
+
+/*memset*/
+void *self_memset(void *s, int c, int count)
+{
+	char *sc = s;
+
+	/*copied from*/
+	while(count--){
+		*sc++ = c;
+	}
+
+	return s;
 }
 
 /**copy_string*/

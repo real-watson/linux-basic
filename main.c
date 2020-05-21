@@ -16,6 +16,7 @@ extern int self_strcmp(const char *src, char *dst);
 extern int self_strncmp(const char *src, char *dst, unsigned int count);
 extern int self_strlen1(const char *s);
 extern int self_strlen2(const char *s);
+extern void *self_memset(void *s, int c, int count);
 
 /*main function*/
 int main(void)
@@ -68,5 +69,7 @@ int main(void)
 	char strlenstr[32] = "Iamfromyours";
 	printf("The len of str is %d\n",self_strlen1(strlenstr));
 	printf("The len of str is %d\n",self_strlen2(strlenstr));
+	self_memset(strlenstr, 0, 0);
+	printf("The strlenstr is %s\n",strlenstr);
 	return 0;
 }
