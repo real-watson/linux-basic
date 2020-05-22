@@ -21,7 +21,7 @@ int divide(int x, int y)
 
 int calculate(int x, int y)
 {
-	int (*p) (int a, int b);
+	int (*p) (int,int);
 	/*
 	* 如同char *p = buff;类似，定义一个函数指针， 
 	* &获取函数的地址，指针指向该地址
