@@ -15,8 +15,11 @@ void *self_memcpy(void *dst, const char *src, int count)
 	return dst;/*返回void指定类型数据*/
 }
 
-/*new function memcpy*/
-void *self_memmove(void *dst, const char *src, int count)
+/*
+* new function memcpy
+* void *dst to char *dst which avoids warnings
+*/
+void *self_memmove(char *dst, const char *src, int count)
 {
 	char *dt = dst;
 	const char *sc = src;
