@@ -30,10 +30,10 @@ void *self_memmove(void *dst, const char *src, int count)
 	* H  |xxxxxxx|11111|hello|11111|                L
 	* 不覆盖源串，新串可以被填入。
 	*/	
-	if (src >= dst){
+	if (src >= dst)
 		while(count--)
 			*dt++ = *sc++;
-	}else{
+	else{
 		dt += count;
 		sc += count;
 		while(count--)

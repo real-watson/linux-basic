@@ -72,7 +72,7 @@ int self_swap_number(int *x, int *y)
 /*static using*/
 void self_sum_number(int x)
 {
-	static all = 0;
+	static int all = 0;
 	printf("The all is %d\n",all);
 	all += x;
 }
@@ -94,7 +94,7 @@ int size_space_full()
 	 * xxxx xxxx xxxx xxxx * int(4 bytes)  == 48 bytes( But in some platform it is 96)
 	 * xxxx xxxx xxxx xxxx
 	 */
-	printf("The size of a is %d\n",sizeof(a));	
+	printf("The size of a is %ld\n",sizeof(a));	
 	return sizeof(a);
 }
 

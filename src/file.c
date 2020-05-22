@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+
 
 #define MAX_LINE 1024
 /*copy lines to the other file*/
@@ -47,6 +52,7 @@ int file_size_withf(const char *filename)
 		printf("Fread error\n");
 		return -1;
 	}
+	fclose(file);
 
 	return res;
 }
@@ -58,7 +64,7 @@ int file_size_withoutf(const char *filename)
 	char buff[1024] = "";
 	int len;
 
-	fd = open(filename,"O_RDONLY","0600");
+	fd = open(filename,O_RDONLY,0600);
 
 	if (-1 == fd){
 		printf("Open error\n");
@@ -70,7 +76,7 @@ int file_size_withoutf(const char *filename)
 		printf("Read error\n");
 		return -1;
 	}	
-
+	close(fd);
 	return len;
 }
 

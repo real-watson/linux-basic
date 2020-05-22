@@ -4,7 +4,7 @@
 #include "file.h"
 #include "endian.h"
 #include "algorithm.h"
-#define VERSION "v4.0"
+#define VERSION "v5.0"
 extern void get_memory(char **ptr, int n);
 extern void res_get_memory();
 extern void get_memory_zero(unsigned int flag);
@@ -21,6 +21,8 @@ extern void *self_memset(void *s, int c, int count);
 extern void *self_memcpy(void *dst, const char *src, int count);
 extern void *self_memmove(void *dst, const char *src, int count);
 extern int calculate(int x, int y);
+extern int file_size_withf(const char *filename);
+extern int file_size_withoutf(const char *filename);
 
 /*main function*/
 int main(void)
@@ -29,8 +31,8 @@ int main(void)
 	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION); printf("The fixed structs is %lu\n",SIZEOFALL);
 	int res1,res2; int x = 9; int y = 29; char *string = NULL;
 	char *str = NULL;
-	res1 = file_size_withf("test.txt"); 
-	res2 = file_size_withoutf("test.txt"); 
+	res1 = file_size_withf("../test.txt"); 
+	res2 = file_size_withoutf("../test.txt"); 
 	printf("The size of file is %d,and %d\n",res1,res2);
 	printf("The biggest one is %d %d\n",MAX_2(1,2),MAX_3(1,2,3));
 	self_swap_number(&x,&y);

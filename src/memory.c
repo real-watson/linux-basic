@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /*memory div*/
 
 void memory_divide()
@@ -11,8 +11,8 @@ void memory_divide()
 	int int_two = 0;
 
 	/*check their address in memory*/
-	printf(" sta_one[0x%08x]\n sta_two[0x%08x]\n int_one[0x%08x]\n int_two[0x%08x]\n",&sta_one,&sta_two,&int_one,&int_two);
-	printf("The delta from sta to int is 0x%08x\n",&sta_one - &int_one);
+	printf(" sta_one[0x%p]\n sta_two[0x%p]\n int_one[0x%p]\n int_two[0x%p]\n",&sta_one,&sta_two,&int_one,&int_two);
+	printf("The delta from sta to int is 0x%ld\n",&sta_one - &int_one);
 }
 
 void get_memory(char **p, int n)
