@@ -168,16 +168,15 @@ int self_strlen1(const char *s)
 
 int self_strlen2(const char *s)
 {
-	const char *sc;
+	const char *sc = s;
+
 	/*from linux kernel tree source
 	for(sc = s;*sc != '\0';sc++)
 		;
 	*/
-	sc = s;
-	while(*sc != '\0')
-		sc++;
+	while(*++sc != '\0');/*提前判断到结束符*/
 
-	return sc - s;/*get the len*/
+	return (sc - s);/*get the len*/
 }
 
 /*memset*/
