@@ -3,6 +3,18 @@
 #include <string.h>
 #include <assert.h>
 
+/*new function memcpy*/
+void *self_memcpy(void *dst, const char *src, int count)
+{
+	char *dt = dst;
+	const char *sc = src;
+
+	while(count--)
+		*dt++ = *sc++;
+
+	return dst;/*返回void指定类型数据*/
+}
+
 /*valid digit*/
 int valid_digit(const char c)
 {
