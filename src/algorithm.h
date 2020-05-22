@@ -1,4 +1,4 @@
-#ifndef _APP_SELF_ALHM_
+#ifndef _ALGORITHM_
 
 /*定义一个宏定义交换数据*/
 #define SWAP_NUMBER(x,y) \
@@ -10,5 +10,5 @@
 		}while(0);
 
 
-#define _APP_SELF_ALHM_
+#define _ALGORITHM_
 #endif

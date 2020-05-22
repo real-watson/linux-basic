@@ -1,4 +1,4 @@
-#ifndef _APP_ENDIAN_TYPE_
+#ifndef _ENDIAN_
 
 typedef unsigned int uint32;
 /*0x12345678 -> 0x78563412 as well as LE_TO_BE(le)*/
@@ -16,5 +16,5 @@ typedef unsigned int uint32;
 
 extern int query_endian_mode(int check);
 
-#define _APP_ENDIAN_TYPE_
+#define _ENDIAN_
 #endif

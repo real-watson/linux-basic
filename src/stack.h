@@ -1,4 +1,4 @@
-#ifndef _APP_STACK_HEAP_
+#ifndef _STACK_
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,5 +9,5 @@ void pop(void);
 STACK top(void);
 int is_empty(void);
 int is_full(void);
-#define _APP_STACK_HEAP_
+#define _STACK_
 #endif

@@ -1,4 +1,4 @@
-#ifndef _APP_DATA_TYPE_
+#ifndef _DATA_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -111,5 +111,5 @@ int size_space_full()
 /*define macro for malloc like (char*)malloc(100*sizeof(char))*/
 #define MALLOC(n,type) ((type*)(malloc((n) * sizeof(type))))
 
-#define _APP_DATA_TYPE_
+#define _DATA_
 #endif 
