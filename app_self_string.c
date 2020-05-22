@@ -15,6 +15,34 @@ void *self_memcpy(void *dst, const char *src, int count)
 	return dst;/*返回void指定类型数据*/
 }
 
+/*new function memcpy*/
+void *self_memmove(void *dst, const char *src, int count)
+{
+	char *dt = dst;
+	const char *sc = src;
+	/*
+	* overlapping area
+	* one way dst =< src: H |src|dst| L --> H |src|dst|xxxxx-count-xxxxx L
+	* the other way dst > src: H |dst|src| L --> H |dst|src|xxxxx-count-xxxxx L 该处出现内存重叠，
+	* 则在                     H |dst|xxxx-count-xxxxx|src|xxxxx-count-xxxxx L 
+	* 对比内存位置
+	* H              |xxxxxxx|hello|11111           L
+	* H  |xxxxxxx|11111|hello|11111|                L
+	* 不覆盖源串，新串可以被填入。
+	*/	
+	if (src >= dst){
+		while(count--)
+			*dt++ = *sc++;
+	}else{
+		dt += count;
+		sc += count;
+		while(count--)
+			*--dt = *--sc;
+	}
+
+	return dst;
+}
+
 /*valid digit*/
 int valid_digit(const char c)
 {

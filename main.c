@@ -18,6 +18,7 @@ extern int self_strlen1(const char *s);
 extern int self_strlen2(const char *s);
 extern void *self_memset(void *s, int c, int count);
 extern void *self_memcpy(void *dst, const char *src, int count);
+extern void *self_memmove(void *dst, const char *src, int count);
 
 /*main function*/
 int main(void)
@@ -74,7 +75,10 @@ int main(void)
 	printf("The strlenstr is %s\n",strlenstr);
 	char cpy[32] = "watsonnew";
 	char new[32] = "";
+	char old[32] = "";
 	self_memcpy(new,cpy,sizeof(cpy));
+	self_memmove(old,cpy,sizeof(cpy));
 	printf("The new is %s\n",new);
+	printf("The old is %s\n",old);
 	return 0;
 }
