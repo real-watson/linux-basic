@@ -19,6 +19,7 @@ extern int self_strlen2(const char *s);
 extern void *self_memset(void *s, int c, int count);
 extern void *self_memcpy(void *dst, const char *src, int count);
 extern void *self_memmove(void *dst, const char *src, int count);
+extern int calculate(int x, int y);
 
 /*main function*/
 int main(void)
@@ -80,5 +81,6 @@ int main(void)
 	self_memmove(old,cpy,sizeof(cpy));
 	printf("The new is %s\n",new);
 	printf("The old is %s\n",old);
+	calculate(10,19);
 	return 0;
 }
