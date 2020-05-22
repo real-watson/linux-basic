@@ -213,5 +213,6 @@ char *copy_string(const char *src)
 failure:
 	free(new_str);
 	new_str = NULL;
+	return new_str;
 }
 

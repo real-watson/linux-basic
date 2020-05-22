@@ -19,7 +19,7 @@ int divide(int x, int y)
 	return (x / y);
 }
 
-int calculate(int x, int y)
+void calculate(int x, int y)
 {
 	int (*p) (int,int);
 	/*

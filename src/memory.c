@@ -50,7 +50,8 @@ void get_memory_zero(unsigned short flag)
 			flag = 1;
 			break;
 		case 1: 
-			flag = (sizeof(ptr = (char*)malloc(0)));/*sizeof is not zero*/
+			//flag = (sizeof(ptr = (char*)malloc(0)));/*sizeof is not zero*/
+			//fix me warnings
 			break;
 		case 2:
 			flag = (strlen(ptr = (char*)malloc(0)));

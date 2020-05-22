@@ -59,7 +59,7 @@ typedef struct desktop{
 #define MAX_3(X,Y,Z) (MAX_2(X,Y))>Z?(MAX_2(X,Y)):(Z)
 
 /*using ptr to swap number*/
-int self_swap_number(int *x, int *y)
+void self_swap_number(int *x, int *y)
 {
 	int t;
 	t = *x;
@@ -77,7 +77,7 @@ void self_sum_number(int x)
 	all += x;
 }
 
-int self_all_number()
+void self_all_number()
 {
 	int i;
 	for (i=0; i<5; i++){
