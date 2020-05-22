@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <stdio.h>
-#include "app_stack_heap.h"
+#include "stack.h"
 #define SIZE 100
 
 static STACK stack[SIZE];

@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
-#include "app_data_type.h" #include "app_self_file.h"
-#include "app_endian_type.h"
-#include "app_self_alhm.h"
+#include "data.h" 
+#include "file.h"
+#include "endian.h"
+#include "algorithm.h"
 #define VERSION "v4.0"
 extern void get_memory(char **ptr, int n);
 extern void res_get_memory();
