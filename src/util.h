@@ -17,4 +17,4 @@ extern int calculate(int x, int y);
 extern int file_size_withf(const char *filename);
 extern int file_size_withoutf(const char *filename);
 extern void move_nstr(const char *s, int m);
-
+extern void reset_nbit(int x, unsigned int index);

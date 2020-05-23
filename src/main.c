@@ -70,5 +70,7 @@ int main(void)
 	char move[32] = "123456789";
 	move_nstr(move,3);
 	printf("The move is %s\n",move);
+	int bit = 0x07;
+	reset_nbit(bit,9);
 	return 0;
 }
