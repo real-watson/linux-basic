@@ -16,4 +16,5 @@ extern void *self_memmove(void *dst, const char *src, int count);
 extern int calculate(int x, int y);
 extern int file_size_withf(const char *filename);
 extern int file_size_withoutf(const char *filename);
+extern void move_nstr(const char *s, int m);
 

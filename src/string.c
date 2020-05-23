@@ -3,6 +3,35 @@
 #include <string.h>
 #include <assert.h>
 
+/*
+ * 移动字符串内容
+ * 把倒数几个字符进行移位，如
+ * abcdefghijk 移位M=3 即ijkabcdefgh
+ * m = 3, i = 0, len = 11, s[11] = s[0] = a,s[0] = s[1] = b,s[0] - abcdefgh(8)
+ * s[8] = s[9] = i j k 
+ * three(m) rounds 
+ * */
+void move_nstr(char *s, int m)
+{
+	unsigned int i = 0;
+	unsigned int j = 0;
+	unsigned int len;
+
+	len = strlen(s);
+	if (len == 0)
+		return;
+
+	if (m > len)/*超过原大小，直接赋值len*/
+		m = len;
+
+	/*逐一移位*/
+	for (i = 0; i < len - m; i++)
+		for (j = 0,s[len] = s[0]; j < len; j++)
+			s[j] = s[j+1];
+
+	s[len] = '\0';/*结束符*/
+}
+
 /*new function memcpy*/
 void *self_memcpy(void *dst, const char *src, int count)
 {
