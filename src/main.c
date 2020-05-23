@@ -4,7 +4,7 @@
 #include "file.h"
 #include "endian.h"
 #include "algorithm.h"
-#include "main.h"
+#include "util.h"
 #define VERSION "v5.0"
 /*main function*/
 int main(void)
