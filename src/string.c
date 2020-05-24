@@ -29,7 +29,8 @@ void move_nstr(char *s, int m)
 		for (j = 0,s[len] = s[0]; j < len; j++)
 			s[j] = s[j+1];
 
-	s[len] = '\0';/*结束符*/
+	if (len != strlen(s))/*判断是否变长字符串*/
+		s[len] = '\0';/*结束符*/
 }
 
 /*new function memcpy*/
