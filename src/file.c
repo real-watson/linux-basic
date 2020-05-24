@@ -12,12 +12,10 @@ void copy_long_lines(FILE *in, FILE *out)
 {
 	char buff[MAX_LINE] = "";
 
-	if (NULL == in){
+	if (NULL == in)
 		return;
-	}
-	if (NULL == out){
+	if (NULL == out)
 		return;
-	}
 
 	/*
 	while(fgets(buff,MAX_LINE,in) != NULL){
@@ -26,9 +24,8 @@ void copy_long_lines(FILE *in, FILE *out)
 	*/
 
 	while(1){
-		if (fgets(buff,MAX_LINE,in) == NULL){
+		if (fgets(buff,MAX_LINE,in) == NULL)
 			break;
-		}
 		fputs(buff,out);
 	}
 }
