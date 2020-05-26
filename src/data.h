@@ -72,9 +72,5 @@ typedef struct desktop{
 /*define macro for malloc like (char*)malloc(100*sizeof(char))*/
 #define MALLOC(n,type) ((type*)(malloc((n) * sizeof(type))))
 
-void self_swap_number(int *x, int *y);
-void self_sum_number(int x);
-void self_all_number();
-int size_space_full();
 
 #endif 
