@@ -5,11 +5,11 @@
 #include "endian.h"
 #include "algorithm.h"
 #include "util.h"
-#define VERSION "v5.0"
 /*main function*/
 int main(void)
 { 
 	printf("back to interviewing\n");
+	print_version();
 	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION); printf("The fixed structs is %lu\n",SIZEOFALL);
 	int res1,res2; int x = 9; int y = 29; char *string = NULL;
 	char *str = NULL;
