@@ -1,4 +1,5 @@
-#ifndef _ALGORITHM_
+#ifndef ALGORITHM_H_
+#define ALGORITHM_H_
 
 /*定义一个宏定义交换数据*/
 #define SWAP_NUMBER(x,y) \
@@ -10,5 +11,4 @@
 		}while(0);
 
 
-#define _ALGORITHM_
 #endif

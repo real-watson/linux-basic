@@ -1,4 +1,5 @@
-#ifndef _STACK_
+#ifndef STACK_H_
+#define STACK_H_
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,5 +10,4 @@ void pop(void);
 STACK top(void);
 int is_empty(void);
 int is_full(void);
-#define _STACK_
 #endif
