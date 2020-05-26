@@ -25,4 +25,6 @@ extern void self_swap_number(int *x, int *y);
 extern void self_sum_number(int x);
 extern void self_all_number();
 extern int size_space_full();
+extern int get_random_number(void);
+extern void random_number_callback(int *number, int size, int(*get_next_number)(void));
 #endif

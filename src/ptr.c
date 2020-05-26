@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int sum(int x, int y)
 {
@@ -40,4 +41,19 @@ void calculate(int x, int y)
 	printf("The divide is %d\n",(*p)(x,y));
 
 
+}
+
+
+int get_random_number(void)
+{
+	return rand();
+}
+
+/*callback function*/
+void random_number_callback(int *number, int size, int(*get_next_number)(void))
+{
+	while(size--){
+		number[size] = get_next_number();
+		printf("The num is %d %d\n",size,number[size]);
+	}
 }

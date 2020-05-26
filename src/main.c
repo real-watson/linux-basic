@@ -5,9 +5,12 @@
 #include "endian.h"
 #include "algorithm.h"
 #include "util.h"
+
 /*main function*/
 int main(void)
 { 
+	int a[10];
+	random_number_callback(a,10,get_random_number);
 	printf("back to interviewing\n");
 	print_version();
 	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION); printf("The fixed structs is %lu\n",SIZEOFALL);
