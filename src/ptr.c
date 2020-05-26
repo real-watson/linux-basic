@@ -46,10 +46,16 @@ void calculate(int x, int y)
 
 int get_random_number(void)
 {
-	return rand();
+	return rand();/*return int*/
 }
 
-/*callback function*/
+/*
+* name: callback function
+* input: number array
+* input: size of array
+* input: pointer function for get random numbers
+* output: void
+*/
 void random_number_callback(int *number, int size, int(*get_next_number)(void))
 {
 	while(size--){
