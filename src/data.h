@@ -59,46 +59,6 @@ typedef struct desktop{
 #define MAX_2(X,Y) (X)>(Y)?(X):(Y)
 #define MAX_3(X,Y,Z) (MAX_2(X,Y))>Z?(MAX_2(X,Y)):(Z)
 
-/*using ptr to swap number*/
-void self_swap_number(int *x, int *y)
-{
-	int t;
-	t = *x;
-	*x = *y;/*y to x*/
-	*y = t;/*x to y*/
-	/*wrong way because t-> y, y->x,they are the same*/
-	// *y = t;
-	// *x = *y;
-}
-/*static using*/
-void self_sum_number(int x)
-{
-	static int all = 0;
-	printf("The all is %d\n",all);
-	all += x;
-}
-
-void self_all_number()
-{
-	int i;
-	for (i=0; i<5; i++){
-		self_sum_number(i);
-	}
-}	
-
-/*sizeof*/
-int size_space_full()
-{
-	int **a[3][4];
-	/*
-	 * xxxx xxxx xxxx xxxx 
-	 * xxxx xxxx xxxx xxxx * int(4 bytes)  == 48 bytes( But in some platform it is 96)
-	 * xxxx xxxx xxxx xxxx
-	 */
-	printf("The size of a is %ld\n",sizeof(a));	
-	return sizeof(a);
-}
-
 /*const*/
 //const int a;/*a是一个常数不可修改*/
 //int const a;/*同上*/
@@ -111,5 +71,10 @@ int size_space_full()
 //#define SECOND_YEAR_ADVANCED ((365*24*60*60)UL)
 /*define macro for malloc like (char*)malloc(100*sizeof(char))*/
 #define MALLOC(n,type) ((type*)(malloc((n) * sizeof(type))))
+
+void self_swap_number(int *x, int *y);
+void self_sum_number(int x);
+void self_all_number();
+int size_space_full();
 
 #endif 
