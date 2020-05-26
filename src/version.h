@@ -2,5 +2,6 @@
 #define VERSION_H_
 #include <stdio.h>
 #define VERSION "v20.05.26"
+#define AUTHOR "real-watson"
 
 #endif

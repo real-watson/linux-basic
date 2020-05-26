@@ -5,14 +5,15 @@
 #include "endian.h"
 #include "algorithm.h"
 #include "util.h"
+#define DEBUG_LAST_VERSION 0
 
 /*main function*/
 int main(void)
 { 
+#if DEBUG_LAST_VERSION
 	int a[10];
 	random_number_callback(a,10,get_random_number);
 	printf("back to interviewing\n");
-	print_version();
 	printf("The size of them are %lu for struct, %lu for union in same data \n", SIZEOFSTRUCT, SIZEOFUNION); printf("The fixed structs is %lu\n",SIZEOFALL);
 	int res1,res2; int x = 9; int y = 29; char *string = NULL;
 	char *str = NULL;
@@ -75,5 +76,7 @@ int main(void)
 	printf("The move is %s\n",move);
 	int bit = 0x07;
 	reset_nbit(bit,9);
+#endif 
+	print_version();
 	return 0;
 }

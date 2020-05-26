@@ -2,5 +2,5 @@
 
 void print_version()
 {
-	printf("The version is %s\n",VERSION);
+	printf("The version is %s by %s.\n",VERSION,AUTHOR);
 }
