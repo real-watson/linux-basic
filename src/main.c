@@ -78,5 +78,7 @@ int main(void)
 	reset_nbit(bit,9);
 #endif 
 	print_version();
+	char cmd[32] = "ls";
+	running_command(cmd);
 	return 0;
 }
