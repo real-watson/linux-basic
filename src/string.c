@@ -8,8 +8,7 @@
  * 把倒数几个字符进行移位，如
  * abcdefghijk 移位M=3 即ijkabcdefgh
  * m = 3, i = 0, len = 11, s[11] = s[0] = a,s[0] = s[1] = b,s[0] - abcdefgh(8)
- * s[8] = s[9] = i j k 
- * three(m) rounds 
+ * s[8] = s[9] = i j k * three(m) rounds 
  * */
 void move_nstr(char *s, int m)
 {
@@ -186,8 +185,7 @@ char *self_strncpy(char *dst, const char *src, int size)
 	return dst;
 }
 /*new function strlen*/
-int self_strlen1(const char *s)
-{
+int self_strlen1(const char *s) {
 	int len = 0;
 
 	while(*s++ != '\0')
@@ -213,11 +211,13 @@ int self_strlen2(const char *s)
 void *self_memset(void *s, int c, int count)
 {
 	char *sc = s;
-
 	/*copied from*/
-	while(count--){
+	if (0 >= count)
+		return NULL;
+	if (0 != c)
+		return NULL;
+	while(count--)
 		*sc++ = c;
-	}
 
 	return s;
 }
